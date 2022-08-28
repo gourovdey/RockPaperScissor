@@ -1,0 +1,432 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   /*  outline: solid 1px red; */
+}
+
+body{
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    background-color: #395B64;
+    height: 100vh;
+    padding: 1vw;
+}
+
+
+/* Title*/
+
+.scoreboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    margin-top: 1%;
+    padding: 1% 2%;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.title h1{
+    font-weight: 900;
+    font-size: xxx-large;
+    color: white;
+    letter-spacing: 0.3rem;
+}
+
+/*Round*/
+
+.round-wrapper{
+   display: flex;
+   justify-content: center;
+   margin-top: 2%;
+}
+
+.round{
+  border: 1px solid white; 
+  border-radius: 5px;
+  display: flex;
+  justify-content: center; 
+  padding-right: 1.5%;
+  padding-left: 1%;
+}
+
+.text{
+    padding-right: 10%;
+}
+.text, .numeral{
+    margin: 0;
+    color: white;
+}
+
+
+/* Scores */
+
+.scores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 3%;
+}
+
+.player{
+    width: 100px;
+    height: 70px;
+    background-color: #fff;
+    text-align: center;
+    color: black;
+    font-family: 'Coustard', serif;
+    font-weight: 400;
+}
+.computer{
+    width: 100px;
+    height: 70px;
+    background-color: white;
+    text-align: center; 
+    color: black;
+    font-family: 'Coustard', serif;
+    font-weight: 400;
+}
+
+/*Images*/
+
+.symbols{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hand{
+   background-image: url("Photos/triangle.png");
+   background-repeat: no-repeat;
+   background-position: center;
+   width: 300px;
+   height: 310px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   padding-top: 1%;
+}
+
+.rock{
+    margin-right: 10%;
+}
+.paper{
+    margin-left: 10%;
+}
+.scissor{
+    margin-bottom: 8%;
+}
+
+.rock img:hover, .paper img:hover, .scissor img:hover{
+    transform: scale(1.2);
+}
+
+/*Result*/
+
+.result{
+    /* width: 90%;
+    height: 50%;
+    margin: auto; */
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    height: 40vh;
+}
+
+.innerResult{
+    /* width: 90%;
+    height: 50%;
+    margin: auto; */
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* align-items: center; */
+    height: 40vh;
+}
+ 
+ 
+
+
+/* User Box */
+
+.userside{
+    /* width: 33.33%;
+    height: 100%;*/
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+}
+
+
+
+.youpicked p{
+    color: white;
+    font-family: 'Coustard', serif;
+    font-weight: 400;
+    /* margin-top: 2%; */
+}
+
+
+
+.youpickimage img{
+    transform: scale(1.4);
+}
+
+
+
+/* Message Box */
+
+.displayresult{
+    /* width: 33.34%;
+    height: 100%;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.message h3{
+    color: white;
+    font-family: 'Merriweather', serif;
+    font-weight: 900;
+    font-size: xx-large;
+}
+
+.next{
+    padding-top: 30%;
+}
+
+.refresh{
+    font-family: 'MERRIWEATHER', serif;
+    font-weight: 900;
+    transition: all 0.15s;
+}
+
+.refresh:hover{
+    transform: translate3d(0, -2px, 0);
+    box-shadow: 3px 3px 10px rgb(96, 139, 179);
+}
+
+.playagain{
+    font-family: 'MERRIWEATHER', serif;
+    font-weight: 900;
+    transition: all 0.15s;
+}
+
+.playagain:hover{
+    transform: translate3d(0, -2px, 0);
+    box-shadow: 3px 3px 10px rgb(96, 139, 179);
+}
+
+
+/* Computer Side Box */
+
+.computerside{
+    /* width: 33.33%;
+    height: 100%;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.compicked p{
+    color: white;
+    font-family: 'Coustard', serif;
+    font-weight: 400;
+    /* margin-top: 2%; */
+}
+
+
+
+.compickimage img{
+    transform: scale(1.4);
+}
+
+
+/* Modals*/
+.modal-header{
+    justify-content: center;
+}
+
+.modal-body p{
+    text-align: center;
+}
+.modaHeader{
+    font-size: 1.5rem;
+    padding-left: 5%;
+}
+
+
+/*  Result   */
+
+.mobileResult{
+    display: none;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 1200px){
+    .round{
+        margin-top: 3%;
+    }
+
+    .scores{
+        margin-top: 5%;
+    }
+    .symbols{
+        margin-top: 5%;
+    }
+
+}
+
+
+
+@media screen and (max-width: 760px) {
+    .title h1{
+        font-weight: 900;
+        color: white;
+        text-align: center;
+    }
+
+    .round{
+        margin-top: 5%;
+    }
+
+    .scores{
+        margin-top: 8%;
+    }
+    .symbols{
+        margin-top: 8%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .scores{
+        margin-top: 10%;
+    }
+    .symbols{
+        margin-top: 15%;
+    }
+}
+
+@media screen and (max-width: 546px) {
+    .title h1{
+        font-weight: 900;
+        /* font-size:large; */
+        color: white;
+    }
+
+    
+    .scoreboard{
+        margin-top: 2%;
+    }
+    .round{
+        margin-top: 7%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .scores{
+        margin-top: 10%;
+    }
+    .scoreboard{
+        margin-top: 2%;
+    }
+    .round{
+        margin-top: 7%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .round{
+        margin-top: 10%;
+    }
+
+    .scores{
+        margin-top: 15%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .scores{
+        margin-top: 12%;
+    }
+
+    .title{
+        text-align: center;
+        letter-spacing: 0.1rem;
+    }
+
+    .round {
+        margin-top: 8%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .symbols{
+        margin-top: 7%;
+    }
+
+    .hand {
+        width: 270px;
+        height: 260px;
+    }
+
+    .youpickimage img{
+        transform: scale(1);
+    }
+    
+    .compickimage img{
+        transform: scale(1);
+    }
+
+    .symbolimage{
+        transform: scale(0.8);
+    }
+
+
+    .result {
+        height: 45vh;
+    }
+    .innerResult{
+        margin-bottom: 3%;
+    }
+
+    .laptopResult{
+        display: none;
+    }
+
+    .next{
+        padding-top: 0%;
+    }
+
+    .mobileResult{
+        display: block;
+    }
+}
